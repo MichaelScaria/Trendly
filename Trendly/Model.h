@@ -14,5 +14,6 @@
 - (void)vote:(NSInteger)voteIndex onPoll:(int)pollID completion:(void (^)(void))completion;
 - (void)signUpWithDictionary:(NSDictionary *)dictionary WithSuccess:(void (^)(void))success failure:(void (^)(void))failure;
 - (void)logInWithDictionary:(NSDictionary *)dictionary WithSuccess:(void (^)(void))success failure:(void (^)(void))failure;
+- (void)searchRewardStyle:(NSString *)query completion:(void (^)(NSArray *))completion;
 @end
 

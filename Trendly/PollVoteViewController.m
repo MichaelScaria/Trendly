@@ -19,7 +19,7 @@
 @end
 
 @implementation PollVoteViewController
-@synthesize poll = _poll;
+@synthesize poll = _poll, button1, button2, button3, button4;
 
 - (void)setPoll:(Poll *)poll {
     if (poll != _poll) {
@@ -36,7 +36,24 @@
                 }
             });
         }
-        
+        PollItems *item = [self.poll.items objectAtIndex:0];
+        NSString *name = (item.brand.length > 6) ? [item.brand substringToIndex:5] : item.brand;
+        [self.button1 setTitle:name forState:UIControlStateNormal];
+        item = [self.poll.items objectAtIndex:1];
+        name = (item.brand.length > 6) ? [item.brand substringToIndex:5] : item.brand;
+        [self.button2 setTitle:name forState:UIControlStateNormal];
+        item = [self.poll.items objectAtIndex:2];
+        name = (item.brand.length > 6) ? [item.brand substringToIndex:5] : item.brand;
+        [self.button3 setTitle:name forState:UIControlStateNormal];
+        item = [self.poll.items objectAtIndex:3];
+        name = (item.brand.length > 6) ? [item.brand substringToIndex:5] : item.brand;
+        [self.button4 setTitle:name forState:UIControlStateNormal];
+  
+
+
+        self.name.font = [UIFont fontWithName:@"Fabrica" size:12];
+        self.name.text = (poll.username) ? [NSString stringWithFormat:@"%@ asks...", poll.username] : @"someone asks...";
+
         BOOL userFound = NO;
         int voteIndex = 0;
         if ([Session sharedInstance].user) {
@@ -89,10 +106,6 @@
             }
         }
         
-
-        
-
-        
         if (userFound) {
             //user has already voted for this item
             UIButton *button = (UIButton *)[self.view viewWithTag:voteIndex];
@@ -137,4 +150,15 @@
     }];
 }
 
+- (IBAction)comment:(id)sender {
+}
+
+- (IBAction)results:(id)sender {
+}
+
+- (IBAction)share:(id)sender {
+}
+
+- (IBAction)link:(id)sender {
+}
 @end

@@ -11,6 +11,7 @@
 
 #import "Poll.h"
 #import "User.h"
+#import "Item.h"
 
 #import "JSONKit.h"
 #import "AFNetworking.h"
@@ -104,8 +105,18 @@ static Model* _sharedInstance = nil;
     [req setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
     [req setHTTPMethod:@"POST"];
     [req setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    NSError *error;
+    NSHTTPURLResponse *response;
+    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:&response error:&error];
+    if (data){
+        NSArray *userJSON = [[JSONDecoder decoder] objectWithData:data];
+        User *user = [[User alloc] initWithDictionary:[userJSON objectAtIndex:0]];
+        [Session sharedInstance].user = user;
+        if (success) success();
+    }
+    else if (failure) failure();
     
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
+   /* AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
         NSData *data = (NSData *)responseObject;
         if (data){
@@ -119,7 +130,7 @@ static Model* _sharedInstance = nil;
         NSLog(@"Error: %@", error);
         if (failure) failure();
     }];
-    [operation start];
+    [operation start];*/
 }
 
 - (void)vote:(NSInteger)voteIndex onPoll:(int)pollID completion:(void (^)(void))completion {
@@ -135,7 +146,7 @@ static Model* _sharedInstance = nil;
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setInteger:voteIndex forKey:[NSString stringWithFormat:@"Poll:%d", voteIndex]];
+        [defaults setInteger:voteIndex forKey:[NSString stringWithFormat:@"Poll:%d", pollID]];
         [defaults synchronize];
         if (completion) completion();
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -144,6 +155,34 @@ static Model* _sharedInstance = nil;
     [operation start];
 }
 
+- (void)searchRewardStyle:(NSString *)query completion:(void (^)(NSArray *))completion {
+    query = [self escapedString:query];
+    NSLog(@"query - %@", query);
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.rewardstyle.com/v1/search?oauth_token=61f18e835aa410b70e7d5f625e7a9499&keywords=%@&limit=54", query]]];
+    [req setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [req setHTTPMethod:@"GET"];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+        NSString *data = (NSString *)responseObject;
+        if (data){
+            NSDictionary *objectsJSON = [[JSONDecoder decoder] objectWithData:data];
+            NSLog(@"%@", [objectsJSON objectForKey:@"products"]);
+            NSArray *items = [Item itemsWithArray:[objectsJSON objectForKey:@"products"]];
+            if (completion) completion(items);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [operation start];
+    
+    //https://api.rewardstyle.com/v1/search?oauth_token=61f18e835aa410b70e7d5f625e7a9499&keywords=cool+socks&limit=99
+}
+
+- (NSString *)escapedString:(NSString *)string {
+    NSString * encodedString = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)string,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8 );
+    return encodedString;
+}
 
 
 @end

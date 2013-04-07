@@ -10,6 +10,7 @@
 
 @interface Poll : NSObject
 @property (nonatomic, assign) int pollID;
+@property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSArray *items;
 
 + (NSArray *)pollsWithArray:(NSArray *)pollArray;

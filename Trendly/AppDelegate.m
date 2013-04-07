@@ -16,11 +16,15 @@
     // Override point for customization after application launch.
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"Footer.png"]];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"Header.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forBarMetrics:UIBarMetricsDefault];
-    //NSDictionary *d = @{@"username": @"michaelscaria", @"password" : @"password"};
-    //[[Model sharedInstance] logInWithDictionary:d WithSuccess:nil failure:nil];
+    [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:@"Fabrica" size:13.0]];
+
+    NSDictionary *d = @{@"username": @"michaelscaria", @"password" : @"password"};
+    [[Model sharedInstance] logInWithDictionary:d WithSuccess:nil failure:nil];
+    
+    //[[Model sharedInstance] searchRewardStyle:@"chanel" completion:nil];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

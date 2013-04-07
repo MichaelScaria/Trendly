@@ -60,6 +60,17 @@
 		9E00745017113AAB00DC3B5B /* NotVoted.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744E17113AAB00DC3B5B /* NotVoted.png */; };
 		9E00745117113AAB00DC3B5B /* NotVoted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744F17113AAB00DC3B5B /* NotVoted@2x.png */; };
 		9E00745317113D0D00DC3B5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E00745217113D0D00DC3B5B /* QuartzCore.framework */; };
+		9E00745517113E6300DC3B5B /* Fabrica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E00745417113E6300DC3B5B /* Fabrica.ttf */; };
+		9E0074581711589600DC3B5B /* CreateSlot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074561711589600DC3B5B /* CreateSlot@2x.png */; };
+		9E0074591711589600DC3B5B /* CreateSlot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074571711589600DC3B5B /* CreateSlot.png */; };
+		9E00745C171158D600DC3B5B /* CreateHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00745A171158D600DC3B5B /* CreateHeader@2x.png */; };
+		9E00745D171158D600DC3B5B /* CreateHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00745B171158D600DC3B5B /* CreateHeader.png */; };
+		9E0074611711598000DC3B5B /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074601711598000DC3B5B /* CreatePollViewController.m */; };
+		9E007465171163AC00DC3B5B /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E007464171163AC00DC3B5B /* Item.m */; };
+		9E0074681711670100DC3B5B /* ItemSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074661711670100DC3B5B /* ItemSelection.png */; };
+		9E0074691711670100DC3B5B /* ItemSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074671711670100DC3B5B /* ItemSelection@2x.png */; };
+		9E00746C1711759A00DC3B5B /* SelectedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00746A1711759A00DC3B5B /* SelectedBackground.png */; };
+		9E00746D1711759A00DC3B5B /* SelectedBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00746B1711759A00DC3B5B /* SelectedBackground@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +152,19 @@
 		9E00744E17113AAB00DC3B5B /* NotVoted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotVoted.png; sourceTree = "<group>"; };
 		9E00744F17113AAB00DC3B5B /* NotVoted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotVoted@2x.png"; sourceTree = "<group>"; };
 		9E00745217113D0D00DC3B5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9E00745417113E6300DC3B5B /* Fabrica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fabrica.ttf; sourceTree = "<group>"; };
+		9E0074561711589600DC3B5B /* CreateSlot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateSlot@2x.png"; sourceTree = "<group>"; };
+		9E0074571711589600DC3B5B /* CreateSlot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateSlot.png; sourceTree = "<group>"; };
+		9E00745A171158D600DC3B5B /* CreateHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateHeader@2x.png"; sourceTree = "<group>"; };
+		9E00745B171158D600DC3B5B /* CreateHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateHeader.png; sourceTree = "<group>"; };
+		9E00745F1711598000DC3B5B /* CreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewController.h; sourceTree = "<group>"; };
+		9E0074601711598000DC3B5B /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
+		9E007463171163AC00DC3B5B /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		9E007464171163AC00DC3B5B /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		9E0074661711670100DC3B5B /* ItemSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ItemSelection.png; sourceTree = "<group>"; };
+		9E0074671711670100DC3B5B /* ItemSelection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItemSelection@2x.png"; sourceTree = "<group>"; };
+		9E00746A1711759A00DC3B5B /* SelectedBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedBackground.png; sourceTree = "<group>"; };
+		9E00746B1711759A00DC3B5B /* SelectedBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SelectedBackground@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +219,7 @@
 				9E0073C21710B01500DC3B5B /* MainStoryboard_iPad.storyboard */,
 				9E0074021710B3BC00DC3B5B /* PullToRefresh.h */,
 				9E0074031710B3BC00DC3B5B /* PullToRefresh.m */,
-				9E0073FE1710B34800DC3B5B /* PollViewController.h */,
-				9E0073FF1710B34800DC3B5B /* PollViewController.m */,
+				9E00745E1711596600DC3B5B /* RootViewControllers */,
 				9E0074141710C13200DC3B5B /* PollVoteViewController.h */,
 				9E0074151710C13200DC3B5B /* PollVoteViewController.m */,
 				9E0074161710C13200DC3B5B /* PollVoteViewController.xib */,
@@ -300,6 +323,8 @@
 				9E0074121710BB6400DC3B5B /* Vote.m */,
 				9E00741C1710C31400DC3B5B /* User.h */,
 				9E00741D1710C31400DC3B5B /* User.m */,
+				9E007463171163AC00DC3B5B /* Item.h */,
+				9E007464171163AC00DC3B5B /* Item.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -307,10 +332,13 @@
 		9E00741F171105AD00DC3B5B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9E00745417113E6300DC3B5B /* Fabrica.ttf */,
 				9E0074221711068500DC3B5B /* PollBackground.png */,
 				9E0074231711068500DC3B5B /* PollBackground@2x.png */,
 				9E00742E1711082200DC3B5B /* Header.png */,
 				9E00742F1711082200DC3B5B /* Header@2x.png */,
+				9E00745A171158D600DC3B5B /* CreateHeader@2x.png */,
+				9E00745B171158D600DC3B5B /* CreateHeader.png */,
 				9E00742A171107EF00DC3B5B /* Footer@2x.png */,
 				9E00742B171107EF00DC3B5B /* Footer.png */,
 				9E00743217110A3F00DC3B5B /* RefreshArrow@2x.png */,
@@ -327,8 +355,25 @@
 				9E00744717110C6700DC3B5B /* Tag.png */,
 				9E00744A17110C9700DC3B5B /* Results.png */,
 				9E00744B17110C9700DC3B5B /* Results@2x.png */,
+				9E0074561711589600DC3B5B /* CreateSlot@2x.png */,
+				9E0074571711589600DC3B5B /* CreateSlot.png */,
+				9E0074661711670100DC3B5B /* ItemSelection.png */,
+				9E0074671711670100DC3B5B /* ItemSelection@2x.png */,
+				9E00746A1711759A00DC3B5B /* SelectedBackground.png */,
+				9E00746B1711759A00DC3B5B /* SelectedBackground@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9E00745E1711596600DC3B5B /* RootViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E0073FE1710B34800DC3B5B /* PollViewController.h */,
+				9E0073FF1710B34800DC3B5B /* PollViewController.m */,
+				9E00745F1711598000DC3B5B /* CreatePollViewController.h */,
+				9E0074601711598000DC3B5B /* CreatePollViewController.m */,
+			);
+			name = RootViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +454,15 @@
 				9E00744D17110C9700DC3B5B /* Results@2x.png in Resources */,
 				9E00745017113AAB00DC3B5B /* NotVoted.png in Resources */,
 				9E00745117113AAB00DC3B5B /* NotVoted@2x.png in Resources */,
+				9E00745517113E6300DC3B5B /* Fabrica.ttf in Resources */,
+				9E0074581711589600DC3B5B /* CreateSlot@2x.png in Resources */,
+				9E0074591711589600DC3B5B /* CreateSlot.png in Resources */,
+				9E00745C171158D600DC3B5B /* CreateHeader@2x.png in Resources */,
+				9E00745D171158D600DC3B5B /* CreateHeader.png in Resources */,
+				9E0074681711670100DC3B5B /* ItemSelection.png in Resources */,
+				9E0074691711670100DC3B5B /* ItemSelection@2x.png in Resources */,
+				9E00746C1711759A00DC3B5B /* SelectedBackground.png in Resources */,
+				9E00746D1711759A00DC3B5B /* SelectedBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +495,8 @@
 				9E0074171710C13200DC3B5B /* PollVoteViewController.m in Sources */,
 				9E00741B1710C2E000DC3B5B /* Session.m in Sources */,
 				9E00741E1710C31500DC3B5B /* User.m in Sources */,
+				9E0074611711598000DC3B5B /* CreatePollViewController.m in Sources */,
+				9E007465171163AC00DC3B5B /* Item.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

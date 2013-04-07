@@ -10,7 +10,7 @@
 #import "PollItems.h"
 
 @implementation Poll
-@synthesize pollID, items;
+@synthesize pollID, items, username;
 
 + (NSArray *)pollsWithArray:(NSArray *)pollArray {
     NSMutableArray *contests = [NSMutableArray arrayWithCapacity:pollArray.count];
@@ -34,6 +34,9 @@
             if (!value) continue; //if value is null, skip
             if ([key isEqualToString:@"id"]) {
                 self.pollID = [value intValue];
+            }
+            else if ([key isEqualToString:@"user_name"]) {
+                self.username = value;
             }
             else if ([key isEqualToString:@"poll_items"]) {
                 NSMutableArray *tempItems = [[NSMutableArray alloc] init];
