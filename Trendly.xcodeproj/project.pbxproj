@@ -18,12 +18,48 @@
 		9E0073BE1710B01500DC3B5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073BD1710B01500DC3B5B /* Default-568h@2x.png */; };
 		9E0073C11710B01500DC3B5B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073BF1710B01500DC3B5B /* MainStoryboard_iPhone.storyboard */; };
 		9E0073C41710B01500DC3B5B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073C21710B01500DC3B5B /* MainStoryboard_iPad.storyboard */; };
-		9E0073C71710B01500DC3B5B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073C61710B01500DC3B5B /* FirstViewController.m */; };
-		9E0073C91710B01500DC3B5B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073C81710B01500DC3B5B /* first.png */; };
-		9E0073CB1710B01500DC3B5B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073CA1710B01500DC3B5B /* first@2x.png */; };
-		9E0073CE1710B01500DC3B5B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073CD1710B01500DC3B5B /* SecondViewController.m */; };
-		9E0073D01710B01500DC3B5B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073CF1710B01500DC3B5B /* second.png */; };
-		9E0073D21710B01500DC3B5B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0073D11710B01500DC3B5B /* second@2x.png */; };
+		9E0073F11710B2BE00DC3B5B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073DA1710B2BE00DC3B5B /* AFHTTPClient.m */; };
+		9E0073F21710B2BE00DC3B5B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073DC1710B2BE00DC3B5B /* AFHTTPRequestOperation.m */; };
+		9E0073F31710B2BE00DC3B5B /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073DE1710B2BE00DC3B5B /* AFImageRequestOperation.m */; };
+		9E0073F41710B2BE00DC3B5B /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073E01710B2BE00DC3B5B /* AFJSONRequestOperation.m */; };
+		9E0073F51710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073E21710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.m */; };
+		9E0073F61710B2BE00DC3B5B /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073E51710B2BE00DC3B5B /* AFPropertyListRequestOperation.m */; };
+		9E0073F71710B2BE00DC3B5B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073E71710B2BE00DC3B5B /* AFURLConnectionOperation.m */; };
+		9E0073F81710B2BE00DC3B5B /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073E91710B2BE00DC3B5B /* AFXMLRequestOperation.m */; };
+		9E0073F91710B2BE00DC3B5B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073EB1710B2BE00DC3B5B /* UIImageView+AFNetworking.m */; };
+		9E0073FA1710B2BE00DC3B5B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073EE1710B2BE00DC3B5B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E0073FB1710B2BE00DC3B5B /* MSPullToRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073F01710B2BE00DC3B5B /* MSPullToRefreshController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E0074001710B34800DC3B5B /* PollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0073FF1710B34800DC3B5B /* PollViewController.m */; };
+		9E0074041710B3BC00DC3B5B /* PullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074031710B3BC00DC3B5B /* PullToRefresh.m */; };
+		9E0074081710B58100DC3B5B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074071710B58100DC3B5B /* Model.m */; };
+		9E00740C1710B68600DC3B5B /* Poll.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00740B1710B68600DC3B5B /* Poll.m */; };
+		9E00740F1710B90900DC3B5B /* PollItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00740E1710B90900DC3B5B /* PollItems.m */; };
+		9E0074131710BB6400DC3B5B /* Vote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074121710BB6400DC3B5B /* Vote.m */; };
+		9E0074171710C13200DC3B5B /* PollVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074151710C13200DC3B5B /* PollVoteViewController.m */; };
+		9E0074181710C13200DC3B5B /* PollVoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074161710C13200DC3B5B /* PollVoteViewController.xib */; };
+		9E00741B1710C2E000DC3B5B /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00741A1710C2E000DC3B5B /* Session.m */; };
+		9E00741E1710C31500DC3B5B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00741D1710C31400DC3B5B /* User.m */; };
+		9E0074241711068500DC3B5B /* PollBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074221711068500DC3B5B /* PollBackground.png */; };
+		9E0074251711068500DC3B5B /* PollBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074231711068500DC3B5B /* PollBackground@2x.png */; };
+		9E00742C171107EF00DC3B5B /* Footer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00742A171107EF00DC3B5B /* Footer@2x.png */; };
+		9E00742D171107EF00DC3B5B /* Footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00742B171107EF00DC3B5B /* Footer.png */; };
+		9E0074301711082200DC3B5B /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00742E1711082200DC3B5B /* Header.png */; };
+		9E0074311711082200DC3B5B /* Header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00742F1711082200DC3B5B /* Header@2x.png */; };
+		9E00743417110A4000DC3B5B /* RefreshArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743217110A3F00DC3B5B /* RefreshArrow@2x.png */; };
+		9E00743517110A4000DC3B5B /* Pull.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743317110A4000DC3B5B /* Pull.png */; };
+		9E00743817110B7F00DC3B5B /* Share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743617110B7F00DC3B5B /* Share@2x.png */; };
+		9E00743917110B7F00DC3B5B /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743717110B7F00DC3B5B /* Share.png */; };
+		9E00743C17110BBC00DC3B5B /* Comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743A17110BBC00DC3B5B /* Comment.png */; };
+		9E00743D17110BBC00DC3B5B /* Comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00743B17110BBC00DC3B5B /* Comment@2x.png */; };
+		9E00744417110C4000DC3B5B /* Voted.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744017110C4000DC3B5B /* Voted.png */; };
+		9E00744517110C4000DC3B5B /* Voted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744117110C4000DC3B5B /* Voted@2x.png */; };
+		9E00744817110C6700DC3B5B /* Tag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744617110C6700DC3B5B /* Tag@2x.png */; };
+		9E00744917110C6700DC3B5B /* Tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744717110C6700DC3B5B /* Tag.png */; };
+		9E00744C17110C9700DC3B5B /* Results.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744A17110C9700DC3B5B /* Results.png */; };
+		9E00744D17110C9700DC3B5B /* Results@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744B17110C9700DC3B5B /* Results@2x.png */; };
+		9E00745017113AAB00DC3B5B /* NotVoted.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744E17113AAB00DC3B5B /* NotVoted.png */; };
+		9E00745117113AAB00DC3B5B /* NotVoted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00744F17113AAB00DC3B5B /* NotVoted@2x.png */; };
+		9E00745317113D0D00DC3B5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E00745217113D0D00DC3B5B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,14 +78,69 @@
 		9E0073BD1710B01500DC3B5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9E0073C01710B01500DC3B5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		9E0073C31710B01500DC3B5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		9E0073C51710B01500DC3B5B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		9E0073C61710B01500DC3B5B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		9E0073C81710B01500DC3B5B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		9E0073CA1710B01500DC3B5B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		9E0073CC1710B01500DC3B5B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		9E0073CD1710B01500DC3B5B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		9E0073CF1710B01500DC3B5B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		9E0073D11710B01500DC3B5B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		9E0073D91710B2BD00DC3B5B /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		9E0073DA1710B2BE00DC3B5B /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		9E0073DB1710B2BE00DC3B5B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		9E0073DC1710B2BE00DC3B5B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		9E0073DD1710B2BE00DC3B5B /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		9E0073DE1710B2BE00DC3B5B /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		9E0073DF1710B2BE00DC3B5B /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		9E0073E01710B2BE00DC3B5B /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		9E0073E11710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		9E0073E21710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		9E0073E31710B2BE00DC3B5B /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		9E0073E41710B2BE00DC3B5B /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		9E0073E51710B2BE00DC3B5B /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		9E0073E61710B2BE00DC3B5B /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		9E0073E71710B2BE00DC3B5B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		9E0073E81710B2BE00DC3B5B /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		9E0073E91710B2BE00DC3B5B /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		9E0073EA1710B2BE00DC3B5B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		9E0073EB1710B2BE00DC3B5B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		9E0073ED1710B2BE00DC3B5B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9E0073EE1710B2BE00DC3B5B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		9E0073EF1710B2BE00DC3B5B /* MSPullToRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSPullToRefreshController.h; path = ../MSPullToRefreshController.h; sourceTree = "<group>"; };
+		9E0073F01710B2BE00DC3B5B /* MSPullToRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSPullToRefreshController.m; path = ../MSPullToRefreshController.m; sourceTree = "<group>"; };
+		9E0073FE1710B34800DC3B5B /* PollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollViewController.h; sourceTree = "<group>"; };
+		9E0073FF1710B34800DC3B5B /* PollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollViewController.m; sourceTree = "<group>"; };
+		9E0074021710B3BC00DC3B5B /* PullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefresh.h; sourceTree = "<group>"; };
+		9E0074031710B3BC00DC3B5B /* PullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefresh.m; sourceTree = "<group>"; };
+		9E0074061710B58100DC3B5B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		9E0074071710B58100DC3B5B /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		9E00740A1710B68600DC3B5B /* Poll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poll.h; sourceTree = "<group>"; };
+		9E00740B1710B68600DC3B5B /* Poll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poll.m; sourceTree = "<group>"; };
+		9E00740D1710B90900DC3B5B /* PollItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollItems.h; sourceTree = "<group>"; };
+		9E00740E1710B90900DC3B5B /* PollItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollItems.m; sourceTree = "<group>"; };
+		9E0074111710BB6400DC3B5B /* Vote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vote.h; sourceTree = "<group>"; };
+		9E0074121710BB6400DC3B5B /* Vote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vote.m; sourceTree = "<group>"; };
+		9E0074141710C13200DC3B5B /* PollVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollVoteViewController.h; sourceTree = "<group>"; };
+		9E0074151710C13200DC3B5B /* PollVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollVoteViewController.m; sourceTree = "<group>"; };
+		9E0074161710C13200DC3B5B /* PollVoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollVoteViewController.xib; sourceTree = "<group>"; };
+		9E0074191710C2E000DC3B5B /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		9E00741A1710C2E000DC3B5B /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		9E00741C1710C31400DC3B5B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9E00741D1710C31400DC3B5B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		9E0074221711068500DC3B5B /* PollBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PollBackground.png; sourceTree = "<group>"; };
+		9E0074231711068500DC3B5B /* PollBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PollBackground@2x.png"; sourceTree = "<group>"; };
+		9E00742A171107EF00DC3B5B /* Footer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Footer@2x.png"; sourceTree = "<group>"; };
+		9E00742B171107EF00DC3B5B /* Footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Footer.png; sourceTree = "<group>"; };
+		9E00742E1711082200DC3B5B /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
+		9E00742F1711082200DC3B5B /* Header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Header@2x.png"; sourceTree = "<group>"; };
+		9E00743217110A3F00DC3B5B /* RefreshArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshArrow@2x.png"; sourceTree = "<group>"; };
+		9E00743317110A4000DC3B5B /* Pull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pull.png; sourceTree = "<group>"; };
+		9E00743617110B7F00DC3B5B /* Share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Share@2x.png"; sourceTree = "<group>"; };
+		9E00743717110B7F00DC3B5B /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
+		9E00743A17110BBC00DC3B5B /* Comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Comment.png; sourceTree = "<group>"; };
+		9E00743B17110BBC00DC3B5B /* Comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Comment@2x.png"; sourceTree = "<group>"; };
+		9E00744017110C4000DC3B5B /* Voted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Voted.png; sourceTree = "<group>"; };
+		9E00744117110C4000DC3B5B /* Voted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Voted@2x.png"; sourceTree = "<group>"; };
+		9E00744617110C6700DC3B5B /* Tag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tag@2x.png"; sourceTree = "<group>"; };
+		9E00744717110C6700DC3B5B /* Tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tag.png; sourceTree = "<group>"; };
+		9E00744A17110C9700DC3B5B /* Results.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Results.png; sourceTree = "<group>"; };
+		9E00744B17110C9700DC3B5B /* Results@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Results@2x.png"; sourceTree = "<group>"; };
+		9E00744E17113AAB00DC3B5B /* NotVoted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotVoted.png; sourceTree = "<group>"; };
+		9E00744F17113AAB00DC3B5B /* NotVoted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotVoted@2x.png"; sourceTree = "<group>"; };
+		9E00745217113D0D00DC3B5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E00745317113D0D00DC3B5B /* QuartzCore.framework in Frameworks */,
 				9E0073A81710B01500DC3B5B /* UIKit.framework in Frameworks */,
 				9E0073AA1710B01500DC3B5B /* Foundation.framework in Frameworks */,
 				9E0073AC1710B01500DC3B5B /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +178,7 @@
 		9E0073A61710B01500DC3B5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E00745217113D0D00DC3B5B /* QuartzCore.framework */,
 				9E0073A71710B01500DC3B5B /* UIKit.framework */,
 				9E0073A91710B01500DC3B5B /* Foundation.framework */,
 				9E0073AB1710B01500DC3B5B /* CoreGraphics.framework */,
@@ -100,14 +193,17 @@
 				9E0073B71710B01500DC3B5B /* AppDelegate.m */,
 				9E0073BF1710B01500DC3B5B /* MainStoryboard_iPhone.storyboard */,
 				9E0073C21710B01500DC3B5B /* MainStoryboard_iPad.storyboard */,
-				9E0073C51710B01500DC3B5B /* FirstViewController.h */,
-				9E0073C61710B01500DC3B5B /* FirstViewController.m */,
-				9E0073C81710B01500DC3B5B /* first.png */,
-				9E0073CA1710B01500DC3B5B /* first@2x.png */,
-				9E0073CC1710B01500DC3B5B /* SecondViewController.h */,
-				9E0073CD1710B01500DC3B5B /* SecondViewController.m */,
-				9E0073CF1710B01500DC3B5B /* second.png */,
-				9E0073D11710B01500DC3B5B /* second@2x.png */,
+				9E0074021710B3BC00DC3B5B /* PullToRefresh.h */,
+				9E0074031710B3BC00DC3B5B /* PullToRefresh.m */,
+				9E0073FE1710B34800DC3B5B /* PollViewController.h */,
+				9E0073FF1710B34800DC3B5B /* PollViewController.m */,
+				9E0074141710C13200DC3B5B /* PollVoteViewController.h */,
+				9E0074151710C13200DC3B5B /* PollVoteViewController.m */,
+				9E0074161710C13200DC3B5B /* PollVoteViewController.xib */,
+				9E0074091710B66C00DC3B5B /* Models */,
+				9E0074051710B57500DC3B5B /* Singleton */,
+				9E00741F171105AD00DC3B5B /* Images */,
+				9E0073FC1710B2CA00DC3B5B /* External */,
 				9E0073AE1710B01500DC3B5B /* Supporting Files */,
 			);
 			path = Trendly;
@@ -125,6 +221,114 @@
 				9E0073BD1710B01500DC3B5B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E0073D81710B2BD00DC3B5B /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9E0073D91710B2BD00DC3B5B /* AFHTTPClient.h */,
+				9E0073DA1710B2BE00DC3B5B /* AFHTTPClient.m */,
+				9E0073DB1710B2BE00DC3B5B /* AFHTTPRequestOperation.h */,
+				9E0073DC1710B2BE00DC3B5B /* AFHTTPRequestOperation.m */,
+				9E0073DD1710B2BE00DC3B5B /* AFImageRequestOperation.h */,
+				9E0073DE1710B2BE00DC3B5B /* AFImageRequestOperation.m */,
+				9E0073DF1710B2BE00DC3B5B /* AFJSONRequestOperation.h */,
+				9E0073E01710B2BE00DC3B5B /* AFJSONRequestOperation.m */,
+				9E0073E11710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.h */,
+				9E0073E21710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.m */,
+				9E0073E31710B2BE00DC3B5B /* AFNetworking.h */,
+				9E0073E41710B2BE00DC3B5B /* AFPropertyListRequestOperation.h */,
+				9E0073E51710B2BE00DC3B5B /* AFPropertyListRequestOperation.m */,
+				9E0073E61710B2BE00DC3B5B /* AFURLConnectionOperation.h */,
+				9E0073E71710B2BE00DC3B5B /* AFURLConnectionOperation.m */,
+				9E0073E81710B2BE00DC3B5B /* AFXMLRequestOperation.h */,
+				9E0073E91710B2BE00DC3B5B /* AFXMLRequestOperation.m */,
+				9E0073EA1710B2BE00DC3B5B /* UIImageView+AFNetworking.h */,
+				9E0073EB1710B2BE00DC3B5B /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		9E0073EC1710B2BE00DC3B5B /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9E0073ED1710B2BE00DC3B5B /* JSONKit.h */,
+				9E0073EE1710B2BE00DC3B5B /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		9E0073FC1710B2CA00DC3B5B /* External */ = {
+			isa = PBXGroup;
+			children = (
+				9E0073FD1710B2E600DC3B5B /* MSPullToRefreshController */,
+				9E0073D81710B2BD00DC3B5B /* AFNetworking */,
+				9E0073EC1710B2BE00DC3B5B /* JSONKit */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		9E0073FD1710B2E600DC3B5B /* MSPullToRefreshController */ = {
+			isa = PBXGroup;
+			children = (
+				9E0073EF1710B2BE00DC3B5B /* MSPullToRefreshController.h */,
+				9E0073F01710B2BE00DC3B5B /* MSPullToRefreshController.m */,
+			);
+			name = MSPullToRefreshController;
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		9E0074051710B57500DC3B5B /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				9E0074061710B58100DC3B5B /* Model.h */,
+				9E0074071710B58100DC3B5B /* Model.m */,
+				9E0074191710C2E000DC3B5B /* Session.h */,
+				9E00741A1710C2E000DC3B5B /* Session.m */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		9E0074091710B66C00DC3B5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E00740A1710B68600DC3B5B /* Poll.h */,
+				9E00740B1710B68600DC3B5B /* Poll.m */,
+				9E00740D1710B90900DC3B5B /* PollItems.h */,
+				9E00740E1710B90900DC3B5B /* PollItems.m */,
+				9E0074111710BB6400DC3B5B /* Vote.h */,
+				9E0074121710BB6400DC3B5B /* Vote.m */,
+				9E00741C1710C31400DC3B5B /* User.h */,
+				9E00741D1710C31400DC3B5B /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9E00741F171105AD00DC3B5B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9E0074221711068500DC3B5B /* PollBackground.png */,
+				9E0074231711068500DC3B5B /* PollBackground@2x.png */,
+				9E00742E1711082200DC3B5B /* Header.png */,
+				9E00742F1711082200DC3B5B /* Header@2x.png */,
+				9E00742A171107EF00DC3B5B /* Footer@2x.png */,
+				9E00742B171107EF00DC3B5B /* Footer.png */,
+				9E00743217110A3F00DC3B5B /* RefreshArrow@2x.png */,
+				9E00743317110A4000DC3B5B /* Pull.png */,
+				9E00743717110B7F00DC3B5B /* Share.png */,
+				9E00743617110B7F00DC3B5B /* Share@2x.png */,
+				9E00743A17110BBC00DC3B5B /* Comment.png */,
+				9E00743B17110BBC00DC3B5B /* Comment@2x.png */,
+				9E00744017110C4000DC3B5B /* Voted.png */,
+				9E00744117110C4000DC3B5B /* Voted@2x.png */,
+				9E00744E17113AAB00DC3B5B /* NotVoted.png */,
+				9E00744F17113AAB00DC3B5B /* NotVoted@2x.png */,
+				9E00744617110C6700DC3B5B /* Tag@2x.png */,
+				9E00744717110C6700DC3B5B /* Tag.png */,
+				9E00744A17110C9700DC3B5B /* Results.png */,
+				9E00744B17110C9700DC3B5B /* Results@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,10 +388,27 @@
 				9E0073BE1710B01500DC3B5B /* Default-568h@2x.png in Resources */,
 				9E0073C11710B01500DC3B5B /* MainStoryboard_iPhone.storyboard in Resources */,
 				9E0073C41710B01500DC3B5B /* MainStoryboard_iPad.storyboard in Resources */,
-				9E0073C91710B01500DC3B5B /* first.png in Resources */,
-				9E0073CB1710B01500DC3B5B /* first@2x.png in Resources */,
-				9E0073D01710B01500DC3B5B /* second.png in Resources */,
-				9E0073D21710B01500DC3B5B /* second@2x.png in Resources */,
+				9E0074181710C13200DC3B5B /* PollVoteViewController.xib in Resources */,
+				9E0074241711068500DC3B5B /* PollBackground.png in Resources */,
+				9E0074251711068500DC3B5B /* PollBackground@2x.png in Resources */,
+				9E00742C171107EF00DC3B5B /* Footer@2x.png in Resources */,
+				9E00742D171107EF00DC3B5B /* Footer.png in Resources */,
+				9E0074301711082200DC3B5B /* Header.png in Resources */,
+				9E0074311711082200DC3B5B /* Header@2x.png in Resources */,
+				9E00743417110A4000DC3B5B /* RefreshArrow@2x.png in Resources */,
+				9E00743517110A4000DC3B5B /* Pull.png in Resources */,
+				9E00743817110B7F00DC3B5B /* Share@2x.png in Resources */,
+				9E00743917110B7F00DC3B5B /* Share.png in Resources */,
+				9E00743C17110BBC00DC3B5B /* Comment.png in Resources */,
+				9E00743D17110BBC00DC3B5B /* Comment@2x.png in Resources */,
+				9E00744417110C4000DC3B5B /* Voted.png in Resources */,
+				9E00744517110C4000DC3B5B /* Voted@2x.png in Resources */,
+				9E00744817110C6700DC3B5B /* Tag@2x.png in Resources */,
+				9E00744917110C6700DC3B5B /* Tag.png in Resources */,
+				9E00744C17110C9700DC3B5B /* Results.png in Resources */,
+				9E00744D17110C9700DC3B5B /* Results@2x.png in Resources */,
+				9E00745017113AAB00DC3B5B /* NotVoted.png in Resources */,
+				9E00745117113AAB00DC3B5B /* NotVoted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +421,26 @@
 			files = (
 				9E0073B41710B01500DC3B5B /* main.m in Sources */,
 				9E0073B81710B01500DC3B5B /* AppDelegate.m in Sources */,
-				9E0073C71710B01500DC3B5B /* FirstViewController.m in Sources */,
-				9E0073CE1710B01500DC3B5B /* SecondViewController.m in Sources */,
+				9E0073F11710B2BE00DC3B5B /* AFHTTPClient.m in Sources */,
+				9E0073F21710B2BE00DC3B5B /* AFHTTPRequestOperation.m in Sources */,
+				9E0073F31710B2BE00DC3B5B /* AFImageRequestOperation.m in Sources */,
+				9E0073F41710B2BE00DC3B5B /* AFJSONRequestOperation.m in Sources */,
+				9E0073F51710B2BE00DC3B5B /* AFNetworkActivityIndicatorManager.m in Sources */,
+				9E0073F61710B2BE00DC3B5B /* AFPropertyListRequestOperation.m in Sources */,
+				9E0073F71710B2BE00DC3B5B /* AFURLConnectionOperation.m in Sources */,
+				9E0073F81710B2BE00DC3B5B /* AFXMLRequestOperation.m in Sources */,
+				9E0073F91710B2BE00DC3B5B /* UIImageView+AFNetworking.m in Sources */,
+				9E0073FA1710B2BE00DC3B5B /* JSONKit.m in Sources */,
+				9E0073FB1710B2BE00DC3B5B /* MSPullToRefreshController.m in Sources */,
+				9E0074001710B34800DC3B5B /* PollViewController.m in Sources */,
+				9E0074041710B3BC00DC3B5B /* PullToRefresh.m in Sources */,
+				9E0074081710B58100DC3B5B /* Model.m in Sources */,
+				9E00740C1710B68600DC3B5B /* Poll.m in Sources */,
+				9E00740F1710B90900DC3B5B /* PollItems.m in Sources */,
+				9E0074131710BB6400DC3B5B /* Vote.m in Sources */,
+				9E0074171710C13200DC3B5B /* PollVoteViewController.m in Sources */,
+				9E00741B1710C2E000DC3B5B /* Session.m in Sources */,
+				9E00741E1710C31500DC3B5B /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

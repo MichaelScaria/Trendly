@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "Model.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"Footer.png"]];
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"Header.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forBarMetrics:UIBarMetricsDefault];
+    //NSDictionary *d = @{@"username": @"michaelscaria", @"password" : @"password"};
+    //[[Model sharedInstance] logInWithDictionary:d WithSuccess:nil failure:nil];
     return YES;
 }
 							
