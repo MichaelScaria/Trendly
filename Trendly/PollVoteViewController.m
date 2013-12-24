@@ -48,7 +48,7 @@
         item = [self.poll.items objectAtIndex:3];
         name = (item.brand.length > 6) ? [item.brand substringToIndex:5] : item.brand;
         [self.button4 setTitle:name forState:UIControlStateNormal];
-  
+        self.results.hidden = YES;
 
 
         self.name.font = [UIFont fontWithName:@"Fabrica" size:12];
@@ -108,6 +108,7 @@
         
         if (userFound) {
             //user has already voted for this item
+            self.results.hidden = NO;
             UIButton *button = (UIButton *)[self.view viewWithTag:voteIndex];
             UIImageView *voteView = [[UIImageView alloc] initWithFrame:CGRectMake(button.frame.origin.x - 6, button.frame.origin.y - 6, button.frame.size.width + 11, button.frame.size.height + 11)];
             voteView.image = [UIImage imageNamed:@"Voted.png"];
@@ -132,6 +133,7 @@
     [[Model sharedInstance] vote:sender.tag onPoll:self.poll.pollID completion:^{
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(sender.frame.origin.x - 5, sender.frame.origin.y - 4, sender.frame.size.width + 8, sender.frame.size.height + 8)];
         imageView.image = [UIImage imageNamed:@"Voted.png"];
+        self.results.hidden = NO;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.view addSubview:imageView];
             for (int i = 1; i <= 4; i++) {
@@ -154,11 +156,19 @@
 }
 
 - (IBAction)results:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Results" object:self.poll];
 }
 
 - (IBAction)share:(id)sender {
 }
 
-- (IBAction)link:(id)sender {
+- (IBAction)link:(UIButton *)sender {
+    PollItems *item = self.poll.items[sender.tag];
+    NSString *link = item.link;
+    if (link && ![link isEqualToString:@""]) {
+        NSLog(@"link - %@", link);
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Web" object:link];
+
+    }
 }
 @end

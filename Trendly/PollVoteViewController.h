@@ -24,5 +24,5 @@
 - (IBAction)comment:(id)sender;
 - (IBAction)results:(id)sender;
 - (IBAction)share:(id)sender;
-- (IBAction)link:(id)sender;
+- (IBAction)link:(UIButton *)sender;
 @end

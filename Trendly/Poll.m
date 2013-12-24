@@ -35,7 +35,7 @@
             if ([key isEqualToString:@"id"]) {
                 self.pollID = [value intValue];
             }
-            else if ([key isEqualToString:@"user_name"]) {
+            else if ([key isEqualToString:@"username"]) {
                 self.username = value;
             }
             else if ([key isEqualToString:@"poll_items"]) {

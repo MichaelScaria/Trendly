@@ -8,6 +8,8 @@
 
 #import "PollViewController.h"
 #import "PollVoteViewController.h"
+#import "ResultsViewController.h"
+#import "WebViewController.h"
 #import "Model.h"
 #import "Poll.h"
 
@@ -25,9 +27,19 @@
     self.scrollView.contentSize = CGSizeMake(screenWidth, screenHeight);
     _ptr = [[PullToRefresh alloc] initWithScrollView:self.scrollView delegate:self];
     self.polls = [[NSMutableArray alloc] init];
-    [self populateScrollViewCompletion:nil];
-    
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(results:) name:@"Results" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(web:) name:@"Web" object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"Results" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"Web" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -52,7 +64,7 @@
                 [self.polls addObject:vc];
                 i++;
             }
-            self.scrollView.contentSize = CGSizeMake(320, i * 462);
+            self.scrollView.contentSize = CGSizeMake(320, (i * 462) - 10.0f);
             
             
             if (completion) completion();
@@ -61,6 +73,32 @@
     });
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Results"]) {
+        Poll *p = (Poll *)sender;
+        ResultsViewController *vc = (ResultsViewController*)segue.destinationViewController;
+        vc.poll = p;
+        
+    }
+    else if ([segue.identifier isEqualToString:@"Web"]) {
+        NSURL *url = (NSURL *)sender;
+        WebViewController *vc = (WebViewController*)segue.destinationViewController;
+        vc.url = url;
+    }
+
+}
+
+
+- (void)results:(NSNotification *)notification {
+    Poll *p = (Poll *)notification.object;
+    [self performSegueWithIdentifier:@"Results" sender:p];
+}
+
+- (void)web:(NSNotification *)notification {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", notification.object]];
+    [self performSegueWithIdentifier:@"Web" sender:url];
+
+}
 
 #pragma mark - CustomPullToRefresh Delegate Methods
 

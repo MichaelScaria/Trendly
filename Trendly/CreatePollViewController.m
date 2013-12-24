@@ -11,6 +11,8 @@
 #import "Model.h"
 #import "Item.h"
 
+#import "PhotoThumbnail.h"
+
 @interface CreatePollViewController ()
 
 @end
@@ -20,6 +22,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.createButton.hidden = YES;
     if (![Session sharedInstance].user) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Log In" message:@"You have to be logged in to create a contest!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
         [alertView show];
@@ -30,17 +33,34 @@
         dictionary = [[NSMutableDictionary alloc] init];
         selected = [[NSMutableArray alloc] init];
         selectedItems = [[NSMutableArray alloc] init];
-        [[Model sharedInstance] searchRewardStyle:@"Chanel" completion:^(NSArray *itemsArray){
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.searchResults = itemsArray;
-                [self.collectionView reloadData];
-            }];
-        }];
+
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    for (UIView *v in selected) {
+        [v removeFromSuperview];
+    }
+    [selected removeAllObjects];
+    [selectedItems removeAllObjects];
+    
 }
 
 - (IBAction)clear:(id)sender {
     self.textField.text = @"";
+}
+
+- (IBAction)create:(id)sender {
+    [[Model sharedInstance] createPollWIthItems:selectedItems completion:^{
+        for (UIView *v in selected) {
+            [v removeFromSuperview];
+        }
+        [selected removeAllObjects];
+        [selectedItems removeAllObjects];
+        NSLog(@"Poll Create Success!");
+        [self.tabBarController setSelectedIndex:0];
+    }];
 }
 
 - (void)remove:(UIButton *)button {
@@ -51,12 +71,20 @@
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         // animate it to the identity transform (100% scale)
         selectedView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        [selectedView removeFromSuperview];
     } completion:^(BOOL finished){
-        for (int i = button.tag; i < 3; i++) {
-            UIView *animateView = [selected objectAtIndex:i];
+        for (int i = button.tag; i < selected.count; i++) {
+            PhotoThumbnail *animateView = (PhotoThumbnail *)[selected objectAtIndex:i];
+            NSLog(@"before:%d", animateView.button.tag);
+            animateView.button.tag = i;
+            NSLog(@"after:%d", animateView.button.tag);
             [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 animateView.frame = CGRectMake(animateView.frame.origin.x - 79, animateView.frame.origin.y, animateView.frame.size.width, animateView.frame.size.height);
-            } completion:nil];
+            } completion:^(BOOL finished){
+                if (selected.count != 4) {
+                    self.createButton.hidden = YES;
+                }
+            }];
 
         }
     }];
@@ -126,14 +154,18 @@
 {
     
     Item *item = self.searchResults[indexPath.row];
-    if (![selectedItems containsObject:item] && selected.count < 5) {
-        UIView *selectedView = [[UIView alloc] initWithFrame:CGRectMake((79 * selected.count) + 6.0f, 87, 72, 72)];
+    if (![selectedItems containsObject:item] && selected.count < 4) {
+        NSLog(@"adding item");
+        PhotoThumbnail *selectedView = [[PhotoThumbnail alloc] initWithFrame:CGRectMake((79 * selected.count) + 6.0f, 87, 72, 72)];
         
-        UIButton *bkg = [UIButton buttonWithType:UIButtonTypeCustom];
-        [bkg addTarget:self action:@selector(remove:) forControlEvents:UIControlEventTouchUpInside];
-        bkg.frame = CGRectMake(0, 0, 72, 72);
-        [bkg setImage:[UIImage imageNamed:@"SelectedBackground.png"] forState:UIControlStateNormal];
-        bkg.tag = selected.count;
+        selectedView.button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [selectedView.button addTarget:self action:@selector(remove:) forControlEvents:UIControlEventTouchUpInside];
+        selectedView.button.frame = CGRectMake(0, 0, 72, 72);
+        [selectedView.button setImage:[UIImage imageNamed:@"SelectedBackground.png"] forState:UIControlStateNormal];
+        selectedView.button.tag = selected.count;
+        
+        UIImageView *bkg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 72, 72)];
+        bkg.image = [UIImage imageNamed:@"SelectedBackground.png"];
         
         UIImage *image;
         if (![dictionary valueForKey:item.imageURL]) {
@@ -145,14 +177,12 @@
             NSData *data = [dictionary valueForKey:item.imageURL];
             image = [UIImage imageWithData:data];
         }
-        UIButton *itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [itemButton addTarget:self action:@selector(remove:) forControlEvents:UIControlEventTouchUpInside];
-        itemButton.frame = CGRectMake(6, 6, 60, 60);
-        [itemButton setImage:image forState:UIControlStateNormal];
-        itemButton.tag = selected.count;
+        UIImageView *itemImage = [[UIImageView alloc] initWithFrame:CGRectMake(6, 6, 60, 60)];
+        itemImage.image = image;
         
-        [selectedView addSubview:itemButton];
+        [selectedView addSubview:itemImage];
         [selectedView addSubview:bkg];
+        [selectedView addSubview:selectedView.button];
         
         [selected addObject:selectedView];
         [selectedItems addObject:item];
@@ -163,7 +193,9 @@
             // animate it to the identity transform (100% scale)
             selectedView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished){
-            // if you want to do something once the animation finishes, put it here
+            if (selected.count == 4) {
+                self.createButton.hidden = NO;
+            }
         }];
     }
 

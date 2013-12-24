@@ -17,7 +17,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (nonatomic, strong) NSArray *searchResults;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIButton *createButton;
 
 - (IBAction)clear:(id)sender;
+- (IBAction)create:(id)sender;
 
 @end

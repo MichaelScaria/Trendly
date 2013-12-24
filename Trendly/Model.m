@@ -164,7 +164,7 @@ static Model* _sharedInstance = nil;
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSString *data = (NSString *)responseObject;
+        NSData *data = (NSData *)responseObject;
         if (data){
             NSDictionary *objectsJSON = [[JSONDecoder decoder] objectWithData:data];
             NSLog(@"%@", [objectsJSON objectForKey:@"products"]);
@@ -184,5 +184,38 @@ static Model* _sharedInstance = nil;
     return encodedString;
 }
 
+- (void)createPollWIthItems:(NSArray *)items completion:(void (^)(void))completion {
+    NSLog(@"createPollWIthItems");
+    NSMutableString *body = [[NSString stringWithFormat:@"user_id=%d", [Session sharedInstance].user.userID] mutableCopy];
+    for (int i = 1; i < 5; i++) {
+        Item *item = items[i-1];        
+        
+        NSMutableURLRequest *itemReq = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.rewardstyle.com/v1/get_link?oauth_token=61f18e835aa410b70e7d5f625e7a9499&product=%@", item.productID]]];
+        [itemReq setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+        [itemReq setHTTPMethod:@"GET"];
+        NSError *error;
+        NSHTTPURLResponse *response;
+        NSData *data = [NSURLConnection sendSynchronousRequest:itemReq returningResponse:&response error:&error];
+        NSString *link = @"";
+        if (data){
+            NSDictionary *linkJSON = [[JSONDecoder decoder] objectWithData:data];
+            link = [linkJSON objectForKey:@"link"];
+        }
+        [body appendFormat:[NSString stringWithFormat:@"&poll_item%d_title=%@&poll_item%d_image=%@&poll_item%d_brand=%@&poll_item%d_link=%@", i, item.name, i, item.imageURL, i, item.brand, i, link]];
+    }
+    NSLog(@"Poll Create Body:%@", body);
+    ;    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/polls", kRootURL]]];
+    [req setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [req setHTTPMethod:@"POST"];
+    [req setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+        if (completion) completion();
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [operation start];
+}
 
 @end

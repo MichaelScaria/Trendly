@@ -71,6 +71,18 @@
 		9E0074691711670100DC3B5B /* ItemSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0074671711670100DC3B5B /* ItemSelection@2x.png */; };
 		9E00746C1711759A00DC3B5B /* SelectedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00746A1711759A00DC3B5B /* SelectedBackground.png */; };
 		9E00746D1711759A00DC3B5B /* SelectedBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E00746B1711759A00DC3B5B /* SelectedBackground@2x.png */; };
+		9E0074701711A85D00DC3B5B /* PhotoThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00746F1711A85C00DC3B5B /* PhotoThumbnail.m */; };
+		9E0074731712022B00DC3B5B /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0074721712022A00DC3B5B /* ResultsViewController.m */; };
+		9EA4E28717120F5E0022C2B1 /* ResultsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E28517120F5E0022C2B1 /* ResultsBackground.png */; };
+		9EA4E28817120F5E0022C2B1 /* ResultsBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E28617120F5E0022C2B1 /* ResultsBackground@2x.png */; };
+		9EA4E28F171211EA0022C2B1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4E28D171211EA0022C2B1 /* WebViewController.m */; };
+		9EA4E2971712222E0022C2B1 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2911712222E0022C2B1 /* Back.png */; };
+		9EA4E2981712222E0022C2B1 /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2921712222E0022C2B1 /* Back@2x.png */; };
+		9EA4E2991712222E0022C2B1 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2931712222E0022C2B1 /* Close.png */; };
+		9EA4E29A1712222E0022C2B1 /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2941712222E0022C2B1 /* Close@2x.png */; };
+		9EA4E29B1712222E0022C2B1 /* Submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2951712222E0022C2B1 /* Submit.png */; };
+		9EA4E29C1712222E0022C2B1 /* Submit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4E2961712222E0022C2B1 /* Submit@2x.png */; };
+		9EA4E29F17122F650022C2B1 /* SessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4E29E17122F650022C2B1 /* SessionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +177,22 @@
 		9E0074671711670100DC3B5B /* ItemSelection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItemSelection@2x.png"; sourceTree = "<group>"; };
 		9E00746A1711759A00DC3B5B /* SelectedBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedBackground.png; sourceTree = "<group>"; };
 		9E00746B1711759A00DC3B5B /* SelectedBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SelectedBackground@2x.png"; sourceTree = "<group>"; };
+		9E00746E1711A85B00DC3B5B /* PhotoThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoThumbnail.h; sourceTree = "<group>"; };
+		9E00746F1711A85C00DC3B5B /* PhotoThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoThumbnail.m; sourceTree = "<group>"; };
+		9E0074711712022900DC3B5B /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		9E0074721712022A00DC3B5B /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		9EA4E28517120F5E0022C2B1 /* ResultsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResultsBackground.png; sourceTree = "<group>"; };
+		9EA4E28617120F5E0022C2B1 /* ResultsBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ResultsBackground@2x.png"; sourceTree = "<group>"; };
+		9EA4E28C171211EA0022C2B1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9EA4E28D171211EA0022C2B1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9EA4E2911712222E0022C2B1 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		9EA4E2921712222E0022C2B1 /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
+		9EA4E2931712222E0022C2B1 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		9EA4E2941712222E0022C2B1 /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
+		9EA4E2951712222E0022C2B1 /* Submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Submit.png; sourceTree = "<group>"; };
+		9EA4E2961712222E0022C2B1 /* Submit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Submit@2x.png"; sourceTree = "<group>"; };
+		9EA4E29D17122F650022C2B1 /* SessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionViewController.h; sourceTree = "<group>"; };
+		9EA4E29E17122F650022C2B1 /* SessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,10 +247,18 @@
 				9E0073C21710B01500DC3B5B /* MainStoryboard_iPad.storyboard */,
 				9E0074021710B3BC00DC3B5B /* PullToRefresh.h */,
 				9E0074031710B3BC00DC3B5B /* PullToRefresh.m */,
+				9EA4E28C171211EA0022C2B1 /* WebViewController.h */,
+				9EA4E28D171211EA0022C2B1 /* WebViewController.m */,
 				9E00745E1711596600DC3B5B /* RootViewControllers */,
+				9E0074711712022900DC3B5B /* ResultsViewController.h */,
+				9E0074721712022A00DC3B5B /* ResultsViewController.m */,
 				9E0074141710C13200DC3B5B /* PollVoteViewController.h */,
 				9E0074151710C13200DC3B5B /* PollVoteViewController.m */,
 				9E0074161710C13200DC3B5B /* PollVoteViewController.xib */,
+				9E00746E1711A85B00DC3B5B /* PhotoThumbnail.h */,
+				9E00746F1711A85C00DC3B5B /* PhotoThumbnail.m */,
+				9EA4E29D17122F650022C2B1 /* SessionViewController.h */,
+				9EA4E29E17122F650022C2B1 /* SessionViewController.m */,
 				9E0074091710B66C00DC3B5B /* Models */,
 				9E0074051710B57500DC3B5B /* Singleton */,
 				9E00741F171105AD00DC3B5B /* Images */,
@@ -332,6 +368,14 @@
 		9E00741F171105AD00DC3B5B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9EA4E2911712222E0022C2B1 /* Back.png */,
+				9EA4E2921712222E0022C2B1 /* Back@2x.png */,
+				9EA4E2931712222E0022C2B1 /* Close.png */,
+				9EA4E2941712222E0022C2B1 /* Close@2x.png */,
+				9EA4E2951712222E0022C2B1 /* Submit.png */,
+				9EA4E2961712222E0022C2B1 /* Submit@2x.png */,
+				9EA4E28517120F5E0022C2B1 /* ResultsBackground.png */,
+				9EA4E28617120F5E0022C2B1 /* ResultsBackground@2x.png */,
 				9E00745417113E6300DC3B5B /* Fabrica.ttf */,
 				9E0074221711068500DC3B5B /* PollBackground.png */,
 				9E0074231711068500DC3B5B /* PollBackground@2x.png */,
@@ -463,6 +507,14 @@
 				9E0074691711670100DC3B5B /* ItemSelection@2x.png in Resources */,
 				9E00746C1711759A00DC3B5B /* SelectedBackground.png in Resources */,
 				9E00746D1711759A00DC3B5B /* SelectedBackground@2x.png in Resources */,
+				9EA4E28717120F5E0022C2B1 /* ResultsBackground.png in Resources */,
+				9EA4E28817120F5E0022C2B1 /* ResultsBackground@2x.png in Resources */,
+				9EA4E2971712222E0022C2B1 /* Back.png in Resources */,
+				9EA4E2981712222E0022C2B1 /* Back@2x.png in Resources */,
+				9EA4E2991712222E0022C2B1 /* Close.png in Resources */,
+				9EA4E29A1712222E0022C2B1 /* Close@2x.png in Resources */,
+				9EA4E29B1712222E0022C2B1 /* Submit.png in Resources */,
+				9EA4E29C1712222E0022C2B1 /* Submit@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +549,10 @@
 				9E00741E1710C31500DC3B5B /* User.m in Sources */,
 				9E0074611711598000DC3B5B /* CreatePollViewController.m in Sources */,
 				9E007465171163AC00DC3B5B /* Item.m in Sources */,
+				9E0074701711A85D00DC3B5B /* PhotoThumbnail.m in Sources */,
+				9E0074731712022B00DC3B5B /* ResultsViewController.m in Sources */,
+				9EA4E28F171211EA0022C2B1 /* WebViewController.m in Sources */,
+				9EA4E29F17122F650022C2B1 /* SessionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +685,7 @@
 				9E0073D71710B01500DC3B5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

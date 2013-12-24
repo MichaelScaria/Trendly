@@ -17,13 +17,23 @@
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"Footer.png"]];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"Header.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forBarMetrics:UIBarMetricsDefault];
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:@"Fabrica" size:13.0]];
-
-    NSDictionary *d = @{@"username": @"michaelscaria", @"password" : @"password"};
-    [[Model sharedInstance] logInWithDictionary:d WithSuccess:nil failure:nil];
+    //[[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"Back"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    int imageSize = 67; //REPLACE WITH YOUR IMAGE WIDTH
     
-    //[[Model sharedInstance] searchRewardStyle:@"chanel" completion:nil];
+    UIImage *barBackBtnImg = [[UIImage imageNamed:@"Back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, imageSize, 0, 0)];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barBackBtnImg
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
+
+    //NSDictionary *d = @{@"username": @"michaelscaria", @"password" : @"password"};
+    //[[Model sharedInstance] logInWithDictionary:d WithSuccess:nil failure:nil];
+    NSDictionary *d = @{@"username": @"michaels", @"password" : @"password", @"first_name" : @"name", @"last_name" : @"last", @"email" : @"email"};
+    [[Model sharedInstance] signUpWithDictionary:d WithSuccess:nil failure:nil];
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

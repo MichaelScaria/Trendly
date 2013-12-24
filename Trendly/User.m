@@ -26,6 +26,9 @@
             else if ([key isEqualToString:@"last_name"]) {
                 self.lastName = value;
             }
+            else if ([key isEqualToString:@"image"]) {
+                self.imageURL = value;
+            }
             else if ([self respondsToSelector:NSSelectorFromString(key)]) {
                 [self setValue:value forKey:key];
             }
